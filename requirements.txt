@@ -1,1 +1,2 @@
 flask
+debugpy # To do live debugging whilte using podman
