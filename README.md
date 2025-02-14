@@ -111,6 +111,15 @@ It means that when the container starts, it will execute commands from /code ins
 * `localhost/my-app` Image name to use to start container.
 
 #### Configure VS Code Debegger
+Add this to "Preference: Open User setting (JSON)" 
+```
+{
+    "dev.containers.dockerPath": "podman",
+}
+```
+
+Install Dev Container Extension in VS Code. crtl + sft + P to open command pallet and select "Dev Container: Attach to running container".
+
 Open VS Code and go to .vscode/launch.json (or create it).
 ```
 {

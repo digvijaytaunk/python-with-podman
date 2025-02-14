@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: demo-container
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    working_dir: /code
+    environment:
+      FLASK_ENV: development
+      FLASK_APP: src/app.py
+    command: [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--debug"]
